@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: grpc-reverseproxy-nginx
+spec:
+  ports:
+  - port: 443
+    targetPort: 443
+  type: ClusterIP
+  selector:
+    app: grpc-reverseproxy-nginx
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpc-reverseproxy-nginx
+spec:
+  replicas: 1
+  selector:
+      matchLabels:
+        app: grpc-reverseproxy-nginx
+  template:
+    metadata:
+      labels:
+        app: grpc-reverseproxy-nginx
+    spec:
+      containers:
+      - name: grpc-reverseproxy-nginx
+        image: grpc-reverseproxy-nginx:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 443

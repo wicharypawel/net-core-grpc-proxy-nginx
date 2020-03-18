@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: grpc-reverseproxy-server
+spec:
+  ports:
+  - port: 5000
+    targetPort: 5000
+  type: ClusterIP
+  selector:
+    app: grpc-reverseproxy-server
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpc-reverseproxy-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grpc-reverseproxy-server
+  template:
+    metadata:
+      labels:
+        app: grpc-reverseproxy-server
+    spec:
+      containers:
+      - name: grpc-reverseproxy-server
+        image: grpc-reverseproxy-server:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000

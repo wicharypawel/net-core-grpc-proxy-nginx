@@ -14,11 +14,9 @@ Main use cases for Nginx with gRPC are:
 
 This repository shows how to configure Nginx as reverse proxy for gRPC. 
 
-```
-docker build -t grpc-reverseproxy-nginx .\NetCoreGrpc.ReverseProxy.Nginx
-```
-
 ## Getting started
+
+__NOTE: if you want to run example in kubernetes have a look__ [here](./README_K8s)
 
 1. Download repository 
 2. Download .Net SDK (in the moment of writing 3.1.101) & install Docker

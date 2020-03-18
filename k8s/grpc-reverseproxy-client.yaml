@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: grpc-reverseproxy-client
+spec:
+  containers:
+  - name: grpc-reverseproxy-client
+    image: grpc-reverseproxy-client:latest
+    imagePullPolicy: Never
+    #env:
+    #- name: GRPC_VERBOSITY
+    #  value: "debug"
+    #- name: GRPC_TRACE
+    #  value: "all"
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "250m"
+  restartPolicy: Never
+  
