@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  grpc-reverseproxy-server:
+    image: ${DOCKER_REGISTRY-}grpc-reverseproxy-server
+    build:
+      context: .
+      dockerfile: NetCoreGrpc.ReverseProxy.AspNetCoreServerApp/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5000:5000"
+
+  grpc-reverseproxy-nginx:
+    image: grpc-reverseproxy-nginx
+    build:
+      context: ./NetCoreGrpc.ReverseProxy.Nginx
+      dockerfile: Dockerfile
+    ports:
+      - "443:443"
+
+  grpc-reverseproxy-client:
+    image: ${DOCKER_REGISTRY-}grpc-reverseproxy-client
+    build:
+      context: .
+      dockerfile: NetCoreGrpc.ReverseProxy.ConsoleClientApp/Dockerfile

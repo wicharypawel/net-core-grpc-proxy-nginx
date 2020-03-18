@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreGrpc.ReverseProxy.ConsoleClientApp", "NetCoreGrpc.ReverseProxy.ConsoleClientApp\NetCoreGrpc.ReverseProxy.ConsoleClientApp.csproj", "{F8637886-9D40-4482-98BF-A99E4E6678A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreGrpc.ReverseProxy.AspNetCoreServerApp", "NetCoreGrpc.ReverseProxy.AspNetCoreServerApp\NetCoreGrpc.ReverseProxy.AspNetCoreServerApp.csproj", "{3E4183F3-7930-4FFD-B264-16DE854A1217}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{72598FFE-14A2-4D59-8618-95DAF87D9934}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetCoreGrpc.ReverseProxy.Nginx", "NetCoreGrpc.ReverseProxy.Nginx", "{A54B9656-516A-4803-A8CC-88DA438E8823}"
+	ProjectSection(SolutionItems) = preProject
+		NetCoreGrpc.ReverseProxy.Nginx\.dockerignore = NetCoreGrpc.ReverseProxy.Nginx\.dockerignore
+		NetCoreGrpc.ReverseProxy.Nginx\configuration\default.conf = NetCoreGrpc.ReverseProxy.Nginx\configuration\default.conf
+		NetCoreGrpc.ReverseProxy.Nginx\Dockerfile = NetCoreGrpc.ReverseProxy.Nginx\Dockerfile
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8637886-9D40-4482-98BF-A99E4E6678A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8637886-9D40-4482-98BF-A99E4E6678A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8637886-9D40-4482-98BF-A99E4E6678A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8637886-9D40-4482-98BF-A99E4E6678A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E4183F3-7930-4FFD-B264-16DE854A1217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E4183F3-7930-4FFD-B264-16DE854A1217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E4183F3-7930-4FFD-B264-16DE854A1217}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E4183F3-7930-4FFD-B264-16DE854A1217}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72598FFE-14A2-4D59-8618-95DAF87D9934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72598FFE-14A2-4D59-8618-95DAF87D9934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72598FFE-14A2-4D59-8618-95DAF87D9934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72598FFE-14A2-4D59-8618-95DAF87D9934}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F901E625-68DD-4E60-8F45-2C384EAD4EF1}
+	EndGlobalSection
+EndGlobal
